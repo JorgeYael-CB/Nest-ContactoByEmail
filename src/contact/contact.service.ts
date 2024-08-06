@@ -47,7 +47,7 @@ export class ContactService {
         throw new BadRequestException('An unexpected error occurred while sending the email, please try again later.')
       }
 
-      return 'Email enviado correctamente!';
+      return {status: 201, message: 'Email enviado correctamente!'};
     } catch (error) {
       console.log(error);
       throw new InternalServerErrorException('Internal server error.');
